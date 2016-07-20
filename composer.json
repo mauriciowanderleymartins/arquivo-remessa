@@ -1,0 +1,25 @@
+{
+    "name": "morrice/arquivo-remessa",
+    "description": "This package is responsible for creating batch files like: transfer, Ted and doc for multiple accounts.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morrice",
+            "email": "mauriciowanderleymartins@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/config" : "*",
+        "nesbot/carbon": "~1.21"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Morrice\\Remessa\\": "src",
+            "Morrice\\Remessa\\Exceptions\\": "src/Exceptions/",
+            "Morrice\\Remessa\\Complemento\\": "src/Complemento/"
+        }
+    }
+}
