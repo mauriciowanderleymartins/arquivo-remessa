@@ -21,5 +21,9 @@
             "Morrice\\Remessa\\Exceptions\\": "src/Exceptions/",
             "Morrice\\Remessa\\Complemento\\": "src/Complemento/"
         }
+    },
+    "scripts": {
+        "post-install-cmd": "Morrice\\Remessa\\Complemento\\Install::install_config",
+        "post-update-cmd":  "Morrice\\Remessa\\Complemento\\Install::install_config"
     }
 }
