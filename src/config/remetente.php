@@ -17,6 +17,7 @@ return [
         'DOCUMENTO' => '31.256.135/0001-46'
     ],
     'CONVENIO'  => '99999999999999999999',
+    'FOLDER'  => 'storage/remessa/',
     'AGENCIA'  => '345',
     'DV-AGENCIA'  => '4',
     'CONTA'  => '23345',

@@ -36,6 +36,7 @@ abstract class Layout {
     
     protected $endereco;
     protected $config;    
+    public $pathfile;
     
     protected $headerfile;
     protected $headerlot;
@@ -54,6 +55,7 @@ abstract class Layout {
         $this->empresa = $this->complet_string($this->config->get('EMPRESA'), 30);
         $this->banco = $this->complet_string($this->config->get('BANCO'), 30);
         $this->endereco = new Endereco( $this->config->get('ENDERECO') );
+        $this->pathfile = $this->config->get('FOLDER') ;
         
     }
 

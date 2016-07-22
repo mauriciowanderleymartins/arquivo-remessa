@@ -131,6 +131,34 @@ class LayoutBancoBrasil extends Layout{
         
     }
 
+    private function generate_file(){
+        
+        $filename = LayoutBancoBrasil::BANCO . "" .$this->lot_number . "" . Carbon::now()->format("dmYHis") . ".txt";
+        
+        if(!file_exists($this->pathfile)){
+            
+            mkdir($this->pathfile, 0777, true);
+            
+        }
+        
+        $file = fopen($_SERVER['DOCUMENT_ROOT'] . $this->pathfile . $filename,"wb");
+        fwrite($file, $this->headerfile."\n");
+        fwrite($file, $this->headerlot."\n");
+        
+        foreach ($this->segments as $segment){
+            
+            fwrite($file, $segment['A']."\n");
+            fwrite($file, $segment['B']."\n");
+            
+        }
+        
+        fwrite($file, $this->trailerlot."\n");
+        fwrite($file, $this->trailerfile."\n");
+        
+        fclose($file);
+        
+    }
+
     private function add_segmentA(Array $segment){
         
          /*Codigo Campo*/
@@ -222,6 +250,12 @@ class LayoutBancoBrasil extends Layout{
     public function load_trailerfile(){
         
         $this->generate_trailerfile();
+        
+    }    
+
+    public function mount_file(){
+        
+        $this->generate_file();
         
     }    
 
