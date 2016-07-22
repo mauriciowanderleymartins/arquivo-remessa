@@ -153,9 +153,10 @@ class LayoutBancoBrasil extends Layout{
         }
         
         fwrite($file, $this->trailerlot."\n");
-        fwrite($file, $this->trailerfile."\n");
-        
+        fwrite($file, $this->trailerfile."\n");        
         fclose($file);
+        
+        return $file;
         
     }
 
@@ -234,6 +235,9 @@ class LayoutBancoBrasil extends Layout{
 
     public function add_segment(Array $segment){
                   
+        $objSegments = new Complemento\Segments();
+        $objSegments->valide($segment);
+        
         $header['A'] = $this->add_segmentA($segment);
         $header['B'] = $this->add_segmentB($segment);
         
@@ -255,7 +259,8 @@ class LayoutBancoBrasil extends Layout{
 
     public function mount_file(){
         
-        $this->generate_file();
+        $filepath = $this->generate_file();
+        return $filepath;
         
     }    
 

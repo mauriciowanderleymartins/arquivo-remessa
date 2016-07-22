@@ -7,7 +7,7 @@ use Morrice\Remessa\ConstantsRegistro;
 use Exceptions\ConfigException;
 use Illuminate\Config\Repository as Config;
 use Morrice\Remessa\Complemento\Endereco;
-use Complemento\Segmento;
+use Complemento\Segments;
 
 /**
  * Description of Layout

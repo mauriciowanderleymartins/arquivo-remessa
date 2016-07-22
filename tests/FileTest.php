@@ -81,25 +81,16 @@ class FileTest extends PHPUnit_Framework_TestCase{
       $layout->load_trailerlot();
       $layout->load_trailerfile();
       
-      //$this->assertEquals("storage/remessa/", $layout->pathfile);
-      
-      $layout->mount_file();
+      $filepath = $layout->mount_file();
 
       $filename = "/storage/remessa/0010010" . Carbon::now()->format("dmYHis") . ".txt";      
+      
+//      $this->assertEquals($filename, $filepath);
+      
       //$filefunction = file_get_contents( $filename );
       
       //$this->assertEquals($filemount, $filefunction);
 
-  }
-
-//    /**
-//     * @expectedException Morrice\Remessa\Exceptions\OperacaoException
-//     */
-//  public function testExceptionOperacao()
-//  {
-//      $layout = new LayoutBancoBrasil(10);
-//
-//  }
-        
+  }        
 }
 
