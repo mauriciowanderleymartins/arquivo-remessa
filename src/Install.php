@@ -1,6 +1,6 @@
 <?php
 
-namespace Morrice\Remessa\Complemento;
+namespace Morrice\Remessa;
 
 /**
  * Description of Endereco
