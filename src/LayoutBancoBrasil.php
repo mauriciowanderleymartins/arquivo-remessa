@@ -141,7 +141,8 @@ class LayoutBancoBrasil extends Layout{
             
         }
         
-        $file = fopen($_SERVER['DOCUMENT_ROOT'] . $this->pathfile . $filename,"wb");
+        $directori = $_SERVER['DOCUMENT_ROOT'] . $this->pathfile . $filename;
+        $file = fopen($directori,"wb");
         fwrite($file, $this->headerfile."\n");
         fwrite($file, $this->headerlot."\n");
         
@@ -156,7 +157,7 @@ class LayoutBancoBrasil extends Layout{
         fwrite($file, $this->trailerfile."\n");        
         fclose($file);
         
-        return $file;
+        return $directori;
         
     }
 

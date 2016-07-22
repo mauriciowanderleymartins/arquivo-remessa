@@ -83,9 +83,9 @@ class FileTest extends PHPUnit_Framework_TestCase{
       
       $filepath = $layout->mount_file();
 
-      $filename = "/storage/remessa/0010010" . Carbon::now()->format("dmYHis") . ".txt";      
+      $filename = "storage/remessa/0010010" . Carbon::now()->format("dmYHis") . ".txt";      
       
-//      $this->assertEquals($filename, $filepath);
+      $this->assertEquals($filename, $filepath);
       
       //$filefunction = file_get_contents( $filename );
       
