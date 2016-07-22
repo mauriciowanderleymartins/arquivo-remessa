@@ -24,11 +24,11 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "Morrice\\Remessa\\Complemento\\Install::install_config",
+            "Morrice\\Remessa\\Install::install_config",
             "echo 'Criando arquivo de configuração'"
             ],
         "post-update-cmd":  [
-            "Morrice\\Remessa\\Complemento\\Install::install_config",
+            "Morrice\\Remessa\\Install::install_config",
             "echo 'Criando arquivo de configuração'"
             ]
     }
